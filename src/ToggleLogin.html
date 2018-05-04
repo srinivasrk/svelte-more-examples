@@ -1,0 +1,25 @@
+<input type="button" value="{loginProp}" on:click="toggleValue(loginProp)" >
+
+<script>
+  export default {
+    data() {
+      return {
+        loginProp: 'login',
+      };
+    },
+    methods: {
+      toggleValue(loginProp){
+        if(loginProp == "login"){
+          this.set({
+            loginProp: 'logout'
+          })
+        }
+        else {
+          this.set({
+            loginProp: 'login'
+          })
+        }
+      }
+    }
+  };
+</script>
